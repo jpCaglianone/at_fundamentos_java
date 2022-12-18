@@ -13,9 +13,9 @@ public class ArquivoTeste {
 
     public static void main(String[] args) {
         Metodos.arqEnergia();
-        String arq = "entrada_solicitacoes.txt";
+        String arq = "solicitacoes.txt";
         try {
-            FileReader arquivoL = new FileReader(Constantes.diretorio + arq);
+            FileReader arquivoL = new FileReader(Constantes.diretorio + "entrada_" + arq);
             BufferedReader leitura = new BufferedReader(arquivoL);
 
             FileWriter arquivoE = new FileWriter(Constantes.diretorio + "saida_" + arq);
@@ -58,14 +58,36 @@ public class ArquivoTeste {
                         }
                         break;
                     case "s":
+                        try {
+                            solicitacao = new Solicitacao(new Requisitante(campos[1], Integer.parseInt(campos[2]), campos[3]), produtos, campos[4]);
+                            solicitacao.imprimirSolicitacao();
+                            break;
+                        }catch (TipoInsumoException | TipoAquisicaoException | SolicitacaoSemProdutoException | SolicitacaoSemRequisitanteException | ValorValidoException| NomeInvalidoException e){
+                            System.out.println(e.getMessage());
+                        }
+                    case "r":
+                        try {
+                            Requisitante r1 = new Requisitante(campos[1], Integer.parseInt(campos[2]),campos[3]);
+                            System.out.println(r1.toString());
+                        } catch (ValorValidoException | TipoInsumoException | NomeInvalidoException e) {
+                            System.out.println(e.getMessage());
+                        }
                         break;
                 }
 
                 linha = leitura.readLine();
             }
+            escrita.write(solicitacao.imprimirSolicitacao());
+            escrita.close();
+            leitura.close();
+            arquivoL.close();
+            arquivoE.close();
 
         } catch (IOException e) {
             System.out.println("[ERRO] - Não foi possível ler o arquivo");
+        }
+        finally {
+            System.out.println("Arquivo de pedido gerado com sucesso!");
         }
     }
 }

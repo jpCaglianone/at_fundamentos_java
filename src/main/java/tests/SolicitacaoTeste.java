@@ -73,26 +73,26 @@ public class SolicitacaoTeste {
         }
         try{
             Solicitacao s2 = new Solicitacao(new Requisitante("", 2,"Privado"),p1,"C");
-            s2.imprimirSolicitacao();
+            System.out.println(s2.imprimirSolicitacao());
         }  catch (TipoInsumoException | TipoAquisicaoException | SolicitacaoSemProdutoException | SolicitacaoSemRequisitanteException | ValorValidoException | NomeInvalidoException e) {
             System.out.println(e.getMessage());
         }
 
         try{
             Solicitacao s3 = new Solicitacao(new Requisitante("João Pedro", 9,"Privado"),p1,"C");
-            s3.imprimirSolicitacao();
+            System.out.println(s3.imprimirSolicitacao());
         }  catch (TipoInsumoException | TipoAquisicaoException | SolicitacaoSemProdutoException | SolicitacaoSemRequisitanteException | ValorValidoException | NomeInvalidoException e) {
             System.out.println(e.getMessage());
         }
         try{
             Solicitacao s4 = new Solicitacao(new Requisitante("João Pedro", 2,"Privado"),p2,"Z");
-            s4.imprimirSolicitacao();
+            System.out.println(s4.imprimirSolicitacao());
         }  catch (TipoInsumoException | TipoAquisicaoException | SolicitacaoSemProdutoException | SolicitacaoSemRequisitanteException | ValorValidoException | NomeInvalidoException e) {
             System.out.println(e.getMessage());
         }
         try{
             Solicitacao s4 = new Solicitacao(new Requisitante("João Pedro", 4,"Privado"),p4,"A");
-            s4.imprimirSolicitacao();
+            System.out.println(s4.imprimirSolicitacao());
         }  catch (TipoInsumoException | TipoAquisicaoException | SolicitacaoSemProdutoException | SolicitacaoSemRequisitanteException | ValorValidoException | NomeInvalidoException e) {
             System.out.println(e.getMessage());
         }

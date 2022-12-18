@@ -66,7 +66,7 @@ public class Solicitacao {
         return idSolicitacao;
     }
 
-    public void imprimirSolicitacao(){
+    public String imprimirSolicitacao(){
 
         StringBuilder descricaoSolicitacao = new StringBuilder();
 
@@ -89,7 +89,7 @@ public class Solicitacao {
         descricaoSolicitacao.append("\n");
         descricaoSolicitacao.append(String.format("O total da solicitação foi de R$%.2f" , calculoTotalSolicitacao()));
 
-        System.out.println(String.valueOf(descricaoSolicitacao));
+        return String.valueOf(descricaoSolicitacao);
     }
 
 
