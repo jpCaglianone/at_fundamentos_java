@@ -3,18 +3,8 @@ s;João Pedro;2;PRIVADO;A
 a;Cabo de ECG;10;129.99;Phillips;Verifica os Sinais vitais do paciente; Sim;2
 e;usado;2020;Ventilador Pulmonar;2;57899.99;Maquet;2;2;0
 i;"Seringa";4;0.5;"Deskarpack;Independente;descartável;10
-
-
-
-
-echo "# at_fundamentos_java" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/jpCaglianone/at_fundamentos_java.git
-git push -u origin main
-…or push an existing repository from the command line
-git remote add origin https://github.com/jpCaglianone/at_fundamentos_java.git
-git branch -M main
-git push -u origin main
+s;João Pedro;2;PRIVADO;A
+a;Cabo de ECG;10;129.99;Phillips;Verifica os Sinais vitais do paciente; Sim;2
+e;usado;2020;Ventilador Pulmonar;2;57899.99;Maquet;2;2;0
+r;Elberth;2;público
+r;Elberth;2;público
