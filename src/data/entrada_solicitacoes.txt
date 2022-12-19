@@ -1,10 +1,10 @@
 r;Elberth;2;público
 s;João Pedro;2;PRIVADO;A
 a;Cabo de ECG;10;129.99;Phillips;Verifica os Sinais vitais do paciente; Sim;2
-e;usado;2020;Ventilador Pulmonar;2;57899.99;Maquet;2;2;0
+e;usado;2020;Ventilador Pulmonar;2;57899.99;Maquet;2;2;A342
 i;"Seringa";4;0.5;"Deskarpack;Independente;descartável;10
 s;João Pedro;2;PRIVADO;A
 a;Cabo de ECG;10;129.99;Phillips;Verifica os Sinais vitais do paciente; Sim;2
-e;usado;2020;Ventilador Pulmonar;2;57899.99;Maquet;2;2;0
+e;usado;2020;Ventilador Pulmonar;2;57899.99;Maquet;2;2;B3242f-t345G
 r;Elberth;2;público
 r;Elberth;2;público

@@ -59,21 +59,13 @@ public class Requisitante {
     }
 
     public String dominioRequisitante(){
-        String dominio="";
-        switch (this.tipoRequisitante){
-            case 1:
-                dominio = "Hospital";
-                break;
-            case 2:
-                dominio = "Clínica";
-                break;
-            case 3:
-                dominio = "Empresa/Instituição";
-                break;
-            case 4:
-                dominio = "Outros";
-                break;
-        }
+        String dominio = switch (this.getTipoRequisitante()) {
+            case 1 -> "Hospital";
+            case 2 -> "Clínica";
+            case 3 -> "Empresa/Instituição";
+            case 4 -> "Outros";
+            default -> "";
+        };
         return dominio;
     }
 }

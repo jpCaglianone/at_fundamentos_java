@@ -9,7 +9,7 @@ public class Acessorio extends Produto{
     private String equipamentoAlvo;
     private String funcao;
     private boolean acompanhaEquipamento;
-    private int linhaNomenclatura; // 0 - standard, 1 - premium, 2 - economic, 3 -
+    private int linhaNomenclatura;
     public Acessorio(String nomeProduto, int quantidade, float valor, String marca, String funcao, String acompanhaEquipamento, int linhaNomenclatura) throws ValorValidoException, NomeInvalidoException {
 
         super(nomeProduto, quantidade, valor, marca);

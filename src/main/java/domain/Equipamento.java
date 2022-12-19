@@ -18,7 +18,7 @@ public class Equipamento extends Produto{
     private String tipoAlimentacao;
     private boolean usado;
 
-    public Equipamento(String estado, int anoFabricacao , String nomeProduto, int quantidade, float valor, String marca, int corrente, int tensao) throws NomeInvalidoException, ValorValidoException, AnoInvalidoException, TensaoInvalidaException {
+    public Equipamento(String estado, int anoFabricacao , String nomeProduto, int quantidade, float valor, String marca, int corrente, int tensao, String numeroSerie) throws NomeInvalidoException, ValorValidoException, AnoInvalidoException, TensaoInvalidaException {
         super(nomeProduto, quantidade, valor, marca);
 
         if (!"usado".equalsIgnoreCase(estado) && !"novo".equalsIgnoreCase(estado)){
@@ -46,6 +46,11 @@ public class Equipamento extends Produto{
             throw new TensaoInvalidaException(mensagem);
         }
 
+        if (numeroSerie == null || numeroSerie.trim() == ""){
+            throw new NomeInvalidoException("O número de série do equipamento deve ser preenchido!");
+        }
+
+        this.numeroSerie = numeroSerie;
         this.anoFabricacao = anoFabricacao;
         this.tipoAlimentacao = Metodos.getTensao().get(tensao) + "/" + Metodos.getCorrente().get(corrente);
         if ("usado".equalsIgnoreCase(estado)){

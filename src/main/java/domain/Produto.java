@@ -29,16 +29,16 @@ public abstract class Produto {
         this.quantidade = quantidade;
     }
 
-    @Override
+
     public String toString() {
         StringBuilder mensagem = new StringBuilder();
-        mensagem.append(nomeProduto);
+        mensagem.append(this.getNomeProduto());
         mensagem.append(";");
-        mensagem.append(marca);
+        mensagem.append(this.getMarca());
         mensagem.append(";");
-        mensagem.append(valor);
+        mensagem.append(this.getValor());
         mensagem.append(";");
-        mensagem.append(quantidade);
+        mensagem.append(this.getQuantidade());
 
         return mensagem.toString();
     }

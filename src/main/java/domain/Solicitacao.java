@@ -54,10 +54,6 @@ public class Solicitacao {
         return dataSolicitacao;
     }
 
-    public Requisitante getRequisitante() {
-        return requisitante;
-    }
-
     public boolean isTipoAquisicao() {
         return tipoAquisicao;
     }
@@ -66,14 +62,20 @@ public class Solicitacao {
         return idSolicitacao;
     }
 
+    public float getValorSolicitacao() {
+        return valorSolicitacao;
+    }
+
     public String imprimirSolicitacao(){
 
         StringBuilder descricaoSolicitacao = new StringBuilder();
 
-        descricaoSolicitacao.append(String.format("O numero do pedido é %s  \n", Metodos.getId()));
+        this.idSolicitacao = Metodos.getId();
+
+        descricaoSolicitacao.append(String.format("O numero do pedido é %s  \n", this.getIdSolicitacao()));
         descricaoSolicitacao.append(String.format("O nome do requisitante do pedido é %s \n", this.requisitante.getNomeRequisitante()));
         descricaoSolicitacao.append(String.format("O requisitante se trata de um(a) %s de dominio %s \n", this.requisitante.dominioRequisitante(), this.requisitante.isOrgaoPublico()?"Público":"Privado"));
-        descricaoSolicitacao.append(String.format("A data da solicitação foi %s \n", this.dataSolicitacao));
+        descricaoSolicitacao.append(String.format("A data da solicitação foi %s \n", this.getDataSolicitacao()));
         descricaoSolicitacao.append(String.format("Segue abaixo os produtos solicitados e acompanhado do valor unitário, quantidade e subtotal \n"));
 
         for(Produto p : produtos){
@@ -87,7 +89,8 @@ public class Solicitacao {
         descricaoSolicitacao.append(String.format("Para orgãos públicos é acrescido uma taxa de 20%%  |"));
         descricaoSolicitacao.append(String.format("Para acessórios que acompanham equipamento, o valor sai no subtotal, por[em não é considerado no valor total  "));
         descricaoSolicitacao.append("\n");
-        descricaoSolicitacao.append(String.format("O total da solicitação foi de R$%.2f" , calculoTotalSolicitacao()));
+        this.valorSolicitacao = calculoTotalSolicitacao();
+        descricaoSolicitacao.append(String.format("O total da solicitação foi de R$%.2f" , this.getValorSolicitacao()));
 
         return String.valueOf(descricaoSolicitacao);
     }

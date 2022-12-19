@@ -21,7 +21,7 @@ public class SolicitacaoTeste {
         List<Produto> p6 = new ArrayList<Produto>();
 
         try {
-            Equipamento e1 = new Equipamento("Novo", 2000, "Cardioversor", 4, 7456.54f, "Cardiomax", 4, 2);
+            Equipamento e1 = new Equipamento("Novo", 2000, "Cardioversor", 4, 7456.54f, "Cardiomax", 4, 2, "3t24/tgwes");
             p1.add(e1);
             p3.add(e1);
             p4.add(e1);
@@ -29,7 +29,7 @@ public class SolicitacaoTeste {
             System.out.println(e.getMessage());
         }
         try {
-            Equipamento e2 = new Equipamento("Usado", 2010, "cardiotocógrafo", 10, 2056.99f, "Bistos", 2, 5);
+            Equipamento e2 = new Equipamento("Usado", 2010, "cardiotocógrafo", 10, 2056.99f, "Bistos", 2, 5,"t34g-3");
             p1.add(e2);
             p2.add(e2);
             p5.add(e2);

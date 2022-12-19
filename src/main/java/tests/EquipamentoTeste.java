@@ -13,8 +13,8 @@ public class EquipamentoTeste {
 
             //primeiro objeto
             try {
-                Equipamento e1 = new Equipamento("usado", 2020, "Ventilador Pulmonar", 2, 57899.99f, "Maquet", 2, 5);
-                System.out.println(e1.toString());
+                Equipamento e1 = new Equipamento("usado", 2020, "Ventilador Pulmonar", 2, 57899.99f, "Maquet", 2, 5, "u89ihwgfod");
+                System.out.println(e1.toString() + ";" + e1.getNomeProduto());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());
             }
@@ -30,7 +30,7 @@ public class EquipamentoTeste {
 
             //segundo objeto
             try {
-                Equipamento e2 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, 7899.99f, "Philips", 1, 0);
+                Equipamento e2 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, 7899.99f, "Philips", 1, 0,"");
                 System.out.println(e2.toString());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());
@@ -47,7 +47,7 @@ public class EquipamentoTeste {
 
             //terceiro objeto
             try {
-                Equipamento e3 = new Equipamento("novo", 2020, "Monitor multiparametro", 0, 7899.99f, "Philips", 1, 0);
+                Equipamento e3 = new Equipamento("novo", 2020, "Monitor multiparametro", 0, 7899.99f, "Philips", 1, 0,"9t28hg4fv");
                 System.out.println(e3.toString());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());
@@ -64,7 +64,7 @@ public class EquipamentoTeste {
 
             //quarto objeto
             try {
-                Equipamento e4 = new Equipamento("novo", 2027, "Monitor multiparametro", 8, 7899.99f, "Philips", 1, 0);
+                Equipamento e4 = new Equipamento("novo", 2027, "Monitor multiparametro", 8, 7899.99f, "Philips", 1, 0,"t24-grvf");
                 System.out.println(e4.toString());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());
@@ -81,7 +81,7 @@ public class EquipamentoTeste {
 
             //quinto objeto
             try {
-                Equipamento e5 = new Equipamento("outro", 2020, "", 8, 7899.99f, "Philips", 1, 0);
+                Equipamento e5 = new Equipamento("outro", 2020, "", 8, 7899.99f, "Philips", 1, 0,"23-5-235");
                 System.out.println(e5.toString());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());
@@ -98,7 +98,7 @@ public class EquipamentoTeste {
 
             //sexto objeto
             try {
-                Equipamento e6 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, -23f, "Philips", 1, 0);
+                Equipamento e6 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, -23f, "Philips", 1, 0,"8h4fj");
                 System.out.println(e6.toString());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());
@@ -115,7 +115,7 @@ public class EquipamentoTeste {
 
             //setimo objeto
             try {
-                Equipamento e7 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, 7899.99f, "Philips", 90, 0);
+                Equipamento e7 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, 7899.99f, "Philips", 90, 0, "29tjg8");
                 System.out.println(e7.toString());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());
@@ -131,7 +131,7 @@ public class EquipamentoTeste {
             }
             //oitavo objeto
             try {
-                Equipamento e8 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, 7899.99f, "Philips", 0, 10);
+                Equipamento e8 = new Equipamento("novo", 2020, "Monitor multiparametro", 8, 7899.99f, "Philips", 0, 10,"3t4g/353");
                 System.out.println(e8.toString());
             } catch(NomeInvalidoException e){
                 System.out.println(e.getMessage());

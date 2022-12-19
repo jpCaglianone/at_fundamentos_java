@@ -26,7 +26,7 @@ public class Insumo extends Produto{
         throw new ValorValidoException("A quantidade deve ser maior que 0!");
     }
 
-    this.tipoInsumo = durabilidade;
+    this.tipoInsumo = tipoInsumo;
 
     this.descartavel = "descartável".equalsIgnoreCase(durabilidade);
 
@@ -55,5 +55,17 @@ public class Insumo extends Produto{
          total *=1.3;
         }
         return total;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder mensagem = new StringBuilder();
+        mensagem.append(this.getTipoInsumo());
+        mensagem.append(";");
+        mensagem.append(this.getQuantidadeLote());
+        mensagem.append(";");
+        mensagem.append(this.isDescartavel()?"Descartável":"Permanente");
+
+        return String.valueOf(mensagem);
     }
 }

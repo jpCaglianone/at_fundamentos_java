@@ -42,7 +42,7 @@ public class ArquivoTeste {
                         break;
                     case "e":
                         try {
-                            Equipamento e1 = new Equipamento(campos[1], Integer.parseInt(campos[2]), campos[3], Integer.parseInt(campos[4]), Float.parseFloat(campos[5]), campos[6], Integer.parseInt(campos[7]), Integer.parseInt(campos[8]));
+                            Equipamento e1 = new Equipamento(campos[1], Integer.parseInt(campos[2]), campos[3], Integer.parseInt(campos[4]), Float.parseFloat(campos[5]), campos[6], Integer.parseInt(campos[7]), Integer.parseInt(campos[8]), campos[9]);
                             System.out.println(e1.toString());
                         }catch(TensaoInvalidaException |ValorValidoException | AnoInvalidoException | NomeInvalidoException e){
                             System.out.println(e.getMessage());
