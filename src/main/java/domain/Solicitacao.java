@@ -87,7 +87,7 @@ public class Solicitacao {
         }
         descricaoSolicitacao.append(String.format("Para equipamentos usados temos desconto de 55%% | "));
         descricaoSolicitacao.append(String.format("Para orgãos públicos é acrescido uma taxa de 20%%  |"));
-        descricaoSolicitacao.append(String.format("Para acessórios que acompanham equipamento, o valor sai no subtotal, por[em não é considerado no valor total  "));
+        descricaoSolicitacao.append(String.format("Para acessórios que acompanham equipamento, o valor sai no subtotal, porém não é considerado no valor total  "));
         descricaoSolicitacao.append("\n");
         this.valorSolicitacao = calculoTotalSolicitacao();
         descricaoSolicitacao.append(String.format("O total da solicitação foi de R$%.2f" , this.getValorSolicitacao()));

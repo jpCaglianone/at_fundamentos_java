@@ -13,13 +13,13 @@ public abstract class Produto {
         if (valor <= 0) {
             throw new ValorValidoException("O valor deve ser maior que 0!");
         }
-        if (nomeProduto == null || nomeProduto == "".trim()) {
+        if (nomeProduto == null || nomeProduto.isEmpty()) {
             throw new NomeInvalidoException("O campo nome deve ser preenchido!");
         }
         if (quantidade <= 0) {
             throw new ValorValidoException("A quantidade deve ser maior que 0!");
         }
-        if (marca == null || marca == "".trim()) {
+        if (marca == null || marca.isEmpty()) {
             throw new NomeInvalidoException("O campo marca deve ser preenchido!");
         }
 
