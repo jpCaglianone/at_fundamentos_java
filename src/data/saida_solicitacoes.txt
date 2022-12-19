@@ -1,7 +1,0 @@
-O numero do pedido é 2  
-O nome do requisitante do pedido é João Pedro 
-O requisitante se trata de um(a) Clínica de dominio Privado 
-A data da solicitação foi 2022-12-19T18:49:05.172729100 
-Segue abaixo os produtos solicitados e acompanhado do valor unitário, quantidade e subtotal 
-Para equipamentos usados temos desconto de 55% | Para orgãos públicos é acrescido uma taxa de 20%  |Para acessórios que acompanham equipamento, o valor sai no subtotal, por[em não é considerado no valor total  
-O total da solicitação foi de R$0,00

@@ -60,11 +60,11 @@ public class ArquivoTeste {
                     case "s":
                         try {
                             solicitacao = new Solicitacao(new Requisitante(campos[1], Integer.parseInt(campos[2]), campos[3]), produtos, campos[4]);
-                            solicitacao.imprimirSolicitacao();
-                            break;
+                            escrita.write(solicitacao.imprimirSolicitacao());
                         }catch (TipoInsumoException | TipoAquisicaoException | SolicitacaoSemProdutoException | SolicitacaoSemRequisitanteException | ValorValidoException| NomeInvalidoException e){
                             System.out.println(e.getMessage());
                         }
+                        break;
                     case "r":
                         try {
                             Requisitante r1 = new Requisitante(campos[1], Integer.parseInt(campos[2]),campos[3]);
@@ -77,7 +77,7 @@ public class ArquivoTeste {
 
                 linha = leitura.readLine();
             }
-            escrita.write(solicitacao.imprimirSolicitacao());
+
             escrita.close();
             leitura.close();
             arquivoL.close();
