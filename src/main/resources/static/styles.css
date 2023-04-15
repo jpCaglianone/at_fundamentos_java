@@ -1,0 +1,27 @@
+body{
+    background-image: url("fundo site ht.jpg");
+
+}
+.lixeira{
+    background-image: url("/lixeira.jpg");
+    height: 35px;
+    width: 30px;
+}
+#tabela{
+    margin: 50px auto;
+}
+
+label{
+    margin-left:20px;
+}
+
+main {
+    display: none;
+    min-width:1200px;
+    width: 1500px;
+    margin: 50px auto;
+    background-color: cornsilk;
+    border-radius: 25px;
+    padding: 20px 0;
+    box-shadow: 5px 5px 10px 5px black;
+}
